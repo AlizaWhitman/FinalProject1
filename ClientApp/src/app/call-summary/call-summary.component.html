@@ -1,0 +1,72 @@
+<head>
+	<!-- Place your kit's code here -->
+	<script src="https://kit.fontawesome.com/57041a5746.js" crossorigin="anonymous"></script>
+	<link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all" rel="stylesheet"
+		id="font-awesome-5-kit-css">
+	<link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all"
+		rel="stylesheet" id="font-awesome-5-kit-css">
+	<link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet"
+		id="font-awesome-5-kit-css">
+</head>
+
+<body>
+	<div class="call-summary-wrap">
+		<div class="call-summary-html">
+			<div class="call-summary-form">
+				<label class="call-summary">Call Summary</label>
+				<form [formGroup]="CallSummaryForm">
+					<div class="call-summary-htm">
+						<!-- <div class="group">
+							<label for="donor-ID" class="label">Select Donor</label>
+							<select class="input" formControlName="dID" (change)="setDonorsFullName(CallSummaryForm.get('dID').value)" >
+								<option *ngFor="let donor of allDonors" [value]="donor.donorsID">
+									{{donor.donorsFullName}}
+								</option>
+							</select>
+						</div> -->
+						<div class="group">
+							<label for="donor-ID" class="label">Full Name</label>
+							<input id="donor-ID" type="text" class="input" formControlName="dFullName">
+						</div>
+						<div class="group">
+							<label for="donation" class="label">Donation</label>
+							<input id="donation" type="number" class="input" formControlName="donation">
+						</div>
+						<div class="group">
+							<label for="call-rating" class="label">How would you rate your call? </label>
+							<div class="rating-group" type="text" >
+								<input class="rating__input rating__input--none" checked name="callRating" id="callRating-0"
+									value="0" type="radio"   >
+								<label aria-label="1 star" class="rating__label" for="callRating-10"><i
+										class="rating__icon rating__icon--star fa fa-star"></i></label>
+								<input class="rating__input" name="callRating" id="callRating-10" value="1" type="radio"  formControlName = "callRating">
+								<label aria-label="2 stars" class="rating__label" for="callRating-20"><i
+										class="rating__icon rating__icon--star fa fa-star"></i></label>
+								<input class="rating__input" name="callRating" id="callRating-20" value="2" type="radio"  formControlName = "callRating">
+								<label aria-label="3 stars" class="rating__label" for="callRating-30"><i
+										class="rating__icon rating__icon--star fa fa-star"></i></label>
+								<input class="rating__input" name="callRating" id="callRating-30" value="3" type="radio" formControlName = "callRating" >
+								<label aria-label="4 stars" class="rating__label" for="callRating-40"><i
+										class="rating__icon rating__icon--star fa fa-star"></i></label>
+								<input class="rating__input" name="callRating" id="callRating-40" value="4" type="radio"  formControlName = "callRating">
+								<label aria-label="5 stars" class="rating__label" for="callRating-50"><i
+										class="rating__icon rating__icon--star fa fa-star"></i></label>
+								<input class="rating__input" name="callRating" id="callRating-50" value="5" type="radio"  formControlName = "callRating">
+							</div>
+						</div>
+						<div class="group">
+							<label for="other" class="label">Anything else we should know? </label>
+							<input id="other" type="text" class="input" formControlName="other">
+						</div>
+					</div>
+					<div class="group">
+						<input type="submit" class="button" [disabled]="!CallSummaryForm.valid" (click)="submit()"
+							[routerLink]="['/CallSummaryComponent']" value="Submit">
+					</div>
+					<div class="hr"></div>
+				
+				</form>
+			</div>
+		</div>
+	</div>
+</body>

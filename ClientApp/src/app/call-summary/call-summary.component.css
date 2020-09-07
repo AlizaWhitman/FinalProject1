@@ -1,0 +1,272 @@
+body{
+	margin:0;
+	border-color: hotpink;
+	border-width: thick;
+	/* background:#c8c8c8; */
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font:small-caps;
+	
+}
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+.call-summary-wrap{
+	color:lightgray;
+	width:100%;
+	margin:auto;
+	max-width:525px;
+	min-height:800px;
+	position:relative;
+	background-color: white;
+	border-color: hotpink;
+	border-width: thick;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+.call-summary{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+	border-color: hotpink;
+	border-width: thick;
+    color:gray;
+}
+.call-summary-html{
+	width:100%;
+	height:100%;
+	position:absolute;
+	padding:90px 70px 50px 70px;
+	background:white;
+	border-color: hotpink;
+	border-width: thick;
+}
+.call-summary-html .sign-in-htm,
+.call-summary-html .sign-up-htm{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+	transition:all .4s linear;
+	border-color: hotpink;
+	border-width: thick;
+	
+}
+.call-summary-html .sign-in,
+.call-summary-html .sign-up,
+.call-summary-form .group .check{
+	display:none;
+	border-color: hotpink;
+	border-width: thick;
+	
+}
+.call-summary-html .tab,
+.call-summary-form .group .label,
+.call-summary-form .group .button{
+	text-transform:lowercase;
+}
+.call-summary-html .tab{
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+	border-color: hotpink;
+	border-width: thick;
+}
+.call-summary-html .sign-in:checked + .tab,
+.call-summary-html .sign-up:checked + .tab{
+	color:gray;
+	border-color: hotpink;
+	border-width: thick;
+}
+.call-summary-form{
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+	border-color: hotpink;
+	border-width: thick;
+
+}
+.call-summary-form .group{
+	margin-bottom:15px;
+	border-color: hotpink;
+	border-width: thick;
+}
+.call-summary-form .group .label,
+.call-summary-form .group .input,
+.call-summary-form .group .button{
+	width:100%;
+	color:black;
+	display:block;
+	border-color: hotpink;
+	border-width: thick;
+}
+.call-summary-form .group .input,
+.call-summary-form .group .button{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	border-color: hotpink;
+	border-width: thick;
+	background:whitesmoke;
+}
+.call-summary-form .group input[data-type="password"]{
+color: gray;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	border-color: hotpink;
+	border-width: thick;
+}
+.call-summary-form .group .label{
+	color:gray;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size:12px;
+	border-color: hotpink;
+	border-width: thick;
+}
+.call-summary-form .group .button{
+	background:hotpink;
+	color:whitesmoke;
+}
+.call-summary-form .group label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	border-color: hotpink;
+	border-width: thick;
+	background:hotpink;
+}
+.call-summary-form .group label .icon:before,
+.call-summary-form .group label .icon:after{
+	content:'';
+	width:10px;
+	height:2px;
+	background:white;
+	position:absolute;
+	transition:all .2s ease-in-out 0s;
+}
+.call-summary-form .group label .icon:before{
+	left:3px;
+	width:5px;
+	bottom:6px;
+	transform:scale(0) rotate(0);
+}
+.call-summary-form .group label .icon:after{
+	top:6px;
+	right:0;
+	transform:scale(0) rotate(0);
+}
+.call-summary-form .group .check:checked + label{
+	color:gray
+}
+.call-summary-form .group .check:checked + label .icon{
+	background:hotpink;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.call-summary-form .group .check:checked + label .icon:before{
+	transform:scale(1) rotate(45deg);
+}
+.call-summary-form .group .check:checked + label .icon:after{
+	transform:scale(1) rotate(-45deg);
+}
+.call-summary-html .sign-in:checked + .tab + .sign-up + .tab + .call-summary-form .sign-in-htm{
+	transform:rotate(0);
+}
+.call-summary-html .sign-up:checked + .tab + .call-summary-form .sign-up-htm{
+	transform:rotate(0);
+}
+
+.hr{
+	height:2px;
+	margin:60px 0 50px 0;
+	border-color: hotpink;
+	border-width: thick;
+	background:hotpink;
+
+}
+.foot-lnk{
+	text-align:center;
+	border-color: hotpink;
+	border-width: thick;
+	
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.rating-group {
+	  display: inline-flex;
+}
+.rating__icon {
+	  pointer-events: none;
+}
+.rating__input {
+	 position: absolute !important;
+	 left: -9999px !important;
+}
+	.rating__label {
+	  cursor: pointer;
+	  padding: 0 0.1em;
+	  font-size: 2rem;
+	}
+	.rating__label--half {
+	  padding-right: 0;
+	  margin-right: -0.6em;
+	  z-index: 2;
+	}
+	/* set default star color */
+	.rating__icon--star {
+	  color:purple;
+	}
+	.rating__icon--none {
+	  color: #eee;
+	}
+  
+	/* if none icon is checked, make it red */
+	.rating__input--none:checked + .rating__label .rating__icon--none {
+	  color: red;
+	}
+  
+	/* if any input is checked, make its following siblings grey */
+	.rating__input:checked ~ .rating__label .rating__icon--star {
+	  color: #ddd;
+	}
+	
+	/* make all stars orange on rating group hover */
+	.rating-group:hover .rating__label .rating__icon--star,
+	.rating-group:hover .rating__label--half .rating__icon--star {
+	  color: purple;
+	}
+  
+	/* make hovered input's following siblings grey on hover */
+	.rating__input:hover ~ .rating__label .rating__icon--star,
+	.rating__input:hover ~ .rating__label--half .rating__icon--star {
+	  color: #ddd;
+	}
+	
+	/* make none icon grey on rating group hover */
+	.rating-group:hover .rating__input--none:not(:hover) + .rating__label .rating__icon--none {
+	   color: #eee;
+	}
+  
+	/* make none icon red on hover */
+	.rating__input--none:hover + .rating__label .rating__icon--none {
+	  color: red;
+	}
+
+  
+  
+  
+  
+  
+
