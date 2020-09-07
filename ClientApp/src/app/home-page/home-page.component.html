@@ -1,0 +1,90 @@
+<!-- <div class="member-details-wrap">
+    <div class="member-details-html">
+        <div class="member-details-form">
+            <form [formGroup]="homePageForm">
+                <div class="group">
+                    <label style="font-size: x-large ; color: blue"> Welcome </label>
+                  <label style="font-size: larger;"> {{_currentMember.firstName}}</label>
+                   
+				</div>
+          
+                <div class="group">
+                    <input type="submit" class="button" value="Start Session!!! "
+                        [routerLink]="['/CallSessionComponent']">
+                </div>
+                <div class="group">
+                    <input type="submit" class="button" value="Personal Details "
+                        [routerLink]="['/MemberDetailsComponent']">
+                </div>
+                <div class="group">
+                    <input type="submit" class="button" value="Add New Donor " [routerLink]="['/DonorNewComponent']">
+                </div>
+            </form>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+
+
+<!DOCTYPE HTML>
+<!--
+	Projection by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+
+		<!-- Banner -->
+			<section id="banner">
+             
+				<div class="inner">
+					<header>
+                        <mat-icon style="font-size: 400px;">account_circle</mat-icon>
+						<h1>Welcome {{_currentMember.firstName}}</h1>
+					</header>
+
+					<div class="flex ">
+
+						<div>
+							<span class="icon fa-car"></span>
+							<h3>Start</h3>
+							<p>Start making phone calls</p>
+						</div>
+
+						<div>
+							<span class="icon fa-camera"></span>
+							<h3>Personal Details</h3>
+							<p>Edit & Review your personal details</p>
+						</div>
+
+						<div>
+							<span class="icon fa-bug"></span>
+							<h3>Add Donor</h3>
+							<p>Add a new donor</p>
+						</div>
+
+					</div>
+
+					<footer>
+						<a href="#" class="button">Get Started</a>
+					</footer>
+				</div>
+			</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
