@@ -1,0 +1,64 @@
+
+
+<div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+
+		<div class="login-form">
+
+			<div class="sign-in-htm">
+				<form [formGroup]="loginForm">
+					<div class="group">
+						<label for="member-email" class="label">Email</label>
+						<input id="member-email" type="email" class="input" formControlName="email">
+					</div>
+					<div class="group">
+						<label for="member-password" class="label">Password</label>
+						<input id="member-password" type="password" class="input" formControlName="password">
+					</div>
+					<div class="group">
+						<input id="check" type="checkbox" class="check" checked>
+						<label for="check"><span class="icon"></span> Keep me Signed In</label>
+					</div>
+					<div class="group">
+						<input type="submit" class="button" [disabled]="!loginForm.valid"
+							(click)=Login() value="Sign In">
+					</div>
+					<div class="hr"></div>
+					<div class="foot-lnk">
+						<a (click)="SendPassword()">Send me my password!</a>
+					</div>
+				</form>
+			</div>
+
+			<div id="send-confirmation" class="sign-up-htm">
+				<div class="group">
+					<label for="member-new-email" class="label">Email</label>
+					<input id="member-new-email" type="email" class="input" [(ngModel)]="_emailForConfirmation">
+				</div>
+				<br>
+				<div class="group">
+					<input type="submit" class="button" value="Send Confirmation Code" (click)="SendConfirmation()">
+				</div>
+				<div class="group">
+				</div>
+				<div class="hr"></div>
+				<div class="foot-lnk">
+					<label for="tab-1">Already Member?</label>
+				</div>
+				<div id="confirmation-code" class="sign-up-htm" style="visibility: hidden">
+					<div class="group">
+						<label for="pass" class="label">Confirmation Code</label>
+						<input id="pass" type="password" class="input" data-type="password" [(ngModel)]="_confirmationCodeEntered">
+					</div>
+					<br>
+					<div class="group">
+						<input type="submit" class="button" value="Sign Up" (click)=Confirmation()>
+					</div>
+					<div class="hr"></div>
+				</div>
+
+			</div>
+		</div>
+	</div>
